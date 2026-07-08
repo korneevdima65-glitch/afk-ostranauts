@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://hbp6rmvofcxy"]
+
+[ext_resource type="Script" uid="uid://bfsqj1dqx03ow" path="res://scenes/map_screen.gd" id="1_pbrhm"]
+
+[node name="MapScreen" type="Control" unique_id=1292530223]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pbrhm")
+
+[node name="Levels" type="Control" parent="." unique_id=2037616257]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Level1Button" type="Button" parent="Levels" unique_id=408912681]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 683.0
+offset_right = 539.0
+offset_bottom = 714.0
+text = "Уровень 1"
+
+[node name="Level2Button" type="Button" parent="Levels" unique_id=1874894739]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 574.0
+offset_right = 370.0
+offset_bottom = 605.0
+text = "Уровень 2"
+
+[node name="Level3Button" type="Button" parent="Levels" unique_id=169686168]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 428.0
+offset_right = 385.0
+offset_bottom = 459.0
+text = "Уровень 3"
+
+[node name="Level4Button" type="Button" parent="Levels" unique_id=944700430]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 310.0
+offset_right = 494.0
+offset_bottom = 341.0
+text = "Уровень 4"
+
+[node name="Level5Button" type="Button" parent="Levels" unique_id=1338390185]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 129.0
+offset_right = 313.0
+offset_bottom = 160.0
+text = "Уровень 5"
+
+[node name="Label" type="Label" parent="." unique_id=1132541753]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 8.0
+offset_right = 386.0
+offset_bottom = 31.0
+text = "Карта мира"
+
+[node name="BackButton" type="Button" parent="." unique_id=925419825]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 782.0
+offset_right = 128.0
+offset_bottom = 826.0
+text = "Назад"
+
+[connection signal="pressed" from="Levels/Level1Button" to="." method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

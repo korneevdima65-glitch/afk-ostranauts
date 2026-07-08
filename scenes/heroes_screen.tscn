@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://ct6xakm301xl3"]
+
+[ext_resource type="Script" uid="uid://b8hkffwc5fr00" path="res://scenes/heroes_screen.gd" id="1_agmyc"]
+[ext_resource type="Texture2D" uid="uid://cq0cgc3cpxcs2" path="res://pixil-frame-0 (4).png" id="2_ipfpe"]
+
+[node name="HeroesScreen" type="Control" unique_id=268899093]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_agmyc")
+
+[node name="ShipInfoPanel" type="Label" parent="." unique_id=480989087]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 76.0
+offset_right = 459.0
+offset_bottom = 99.0
+text = "Инфо Панель Корабля"
+
+[node name="ShipNameLabel" type="Label" parent="ShipInfoPanel" unique_id=138801191]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 38.0
+offset_right = 142.0
+offset_bottom = 61.0
+text = "Штурмовик"
+
+[node name="LevelLabel" type="Label" parent="ShipInfoPanel" unique_id=956592189]
+layout_mode = 0
+offset_left = -185.0
+offset_top = 129.0
+offset_right = -79.0
+offset_bottom = 152.0
+text = "Уровень 0"
+
+[node name="RarityLabel" type="Label" parent="ShipInfoPanel" unique_id=1010901929]
+layout_mode = 0
+offset_left = -184.0
+offset_top = 152.0
+offset_right = -78.0
+offset_bottom = 175.0
+text = "Обычный"
+
+[node name="StarsLabel" type="Label" parent="ShipInfoPanel" unique_id=1643995037]
+layout_mode = 0
+offset_left = -184.0
+offset_top = 173.0
+offset_right = -78.0
+offset_bottom = 196.0
+text = "★0"
+
+[node name="HpLabel" type="Label" parent="ShipInfoPanel" unique_id=2070793733]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 132.0
+offset_right = 336.0
+offset_bottom = 155.0
+text = "HP: 0"
+
+[node name="DamageLabel" type="Label" parent="ShipInfoPanel" unique_id=1934772066]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 157.0
+offset_right = 337.0
+offset_bottom = 180.0
+text = "Урон: 0"
+
+[node name="SpeedLabel" type="Label" parent="ShipInfoPanel" unique_id=412760978]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 182.0
+offset_right = 337.0
+offset_bottom = 205.0
+text = "Скорость: 0"
+
+[node name="UpgradeButton" type="Button" parent="ShipInfoPanel" unique_id=2125819351]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 310.0
+offset_right = 142.0
+offset_bottom = 341.0
+text = "Улучшить"
+
+[node name="ContentTabs" type="TabContainer" parent="." unique_id=298553705]
+layout_mode = 0
+offset_left = -21.0
+offset_top = 10.0
+offset_right = 415.0
+offset_bottom = 41.0
+tab_alignment = 1
+current_tab = 0
+tab_0/title = "Корабли"
+tab_1/title = "Снаряжение"
+tab_2/title = "Навыки"
+tab_3/title = "Модули"
+
+[node name="ShipsTab" type="Control" parent="ContentTabs" unique_id=1736021185]
+layout_mode = 2
+metadata/_tab_index = 0
+metadata/_tab_name = "Корабли"
+
+[node name="ShipsScroll" type="ScrollContainer" parent="ContentTabs/ShipsTab" unique_id=470585982]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 71.0
+offset_top = 482.0
+offset_right = 253.0
+offset_bottom = 808.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ShipsGrid" type="GridContainer" parent="ContentTabs/ShipsTab/ShipsScroll" unique_id=1895120036]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 10
+
+[node name="EquipmentTab" type="Control" parent="ContentTabs" unique_id=224418565]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+metadata/_tab_name = "Снаряжение"
+
+[node name="SkillsTab" type="Control" parent="ContentTabs" unique_id=1931055546]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+metadata/_tab_name = "Навыки"
+
+[node name="ModulesTab" type="Control" parent="ContentTabs" unique_id=650261025]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+metadata/_tab_name = "Модули"
+
+[node name="BackButton" type="Button" parent="." unique_id=1203829325]
+layout_mode = 0
+offset_left = 607.0
+offset_top = 16.0
+offset_right = 704.0
+offset_bottom = 57.0
+text = "Назад"
+
+[node name="PixilFrame0(4)" type="Sprite2D" parent="." unique_id=591097292]
+position = Vector2(-173, 776)
+texture = ExtResource("2_ipfpe")
+
+[node name="PixilFrame0(4)2" type="Sprite2D" parent="." unique_id=2047566797]
+position = Vector2(-175, 603)
+texture = ExtResource("2_ipfpe")
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://fmm1346c4643"]
+
+[ext_resource type="Script" uid="uid://bxwhdq7sa7fvd" path="res://scenes/game_screen.gd" id="1_8mhku"]
+
+[node name="GameScreen" type="Control" unique_id=1473592391]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8mhku")
+
+[node name="AfkPanel" type="Control" parent="." unique_id=1661821005]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="AfkPanel" unique_id=2038080408]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 361.0
+offset_top = 355.0
+offset_right = -262.0
+offset_bottom = -457.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="AfkPanel/Panel" unique_id=1650088852]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 7.0
+offset_right = 80.0
+offset_bottom = 30.0
+text = "AFK Бой"
+
+[node name="TopBar" type="HBoxContainer" parent="." unique_id=865360806]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 11.0
+offset_right = -459.0
+offset_bottom = -799.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProfileButton" type="Button" parent="TopBar" unique_id=1594045187]
+layout_mode = 2
+text = "Профиль"
+
+[node name="ExpLabel" type="Label" parent="TopBar" unique_id=2120901549]
+layout_mode = 2
+text = "Уровень 1"
+
+[node name="GoldLabel" type="Label" parent="TopBar" unique_id=1658540675]
+layout_mode = 2
+
+[node name="BottomButtons" type="HBoxContainer" parent="." unique_id=1141506565]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 145.0
+offset_top = 782.0
+offset_right = -135.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ShipsButton" type="Button" parent="BottomButtons" unique_id=727509975]
+layout_mode = 2
+text = "Корабли"
+
+[node name="MapButton" type="Button" parent="BottomButtons" unique_id=741633876]
+layout_mode = 2
+text = "Карта"
+
+[node name="ShopButton" type="Button" parent="BottomButtons" unique_id=1953765491]
+layout_mode = 2
+text = "Магазин"
+
+[node name="GachaButton" type="Button" parent="BottomButtons" unique_id=1981108894]
+layout_mode = 2
+text = "Крутки"
+
+[node name="QuestButton" type="Button" parent="BottomButtons" unique_id=2072973443]
+layout_mode = 2
+text = "Квесты"
+
+[node name="SettingsButton" type="Button" parent="BottomButtons" unique_id=1100209559]
+layout_mode = 2
+text = "Настройки"
+
+[connection signal="pressed" from="BottomButtons/ShipsButton" to="." method="_on_ships_button_pressed"]
+[connection signal="pressed" from="BottomButtons/MapButton" to="." method="_on_map_button_pressed"]

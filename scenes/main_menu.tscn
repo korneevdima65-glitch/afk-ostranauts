@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://76ef73iqd5f7"]
+
+[ext_resource type="Script" uid="uid://b0c58mcefcnqh" path="res://scenes/main_menu.gd" id="1_l6cm7"]
+
+[node name="MainMenu" type="Control" unique_id=1569398721]
+layout_mode = 3
+anchor_left = 0.003
+anchor_right = 1.001
+anchor_bottom = 0.998
+offset_left = -0.16000009
+offset_right = 0.27996826
+offset_bottom = -0.30004883
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="PlayButton" type="Button" parent="." unique_id=523310049]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 335.0
+offset_top = 408.0
+offset_right = -318.0
+offset_bottom = -409.0
+text = "Играть"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
